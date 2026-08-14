@@ -284,20 +284,7 @@
   .lead-card .btn{width:100%; text-align:center; margin-top:6px;}
   .lead-card.accent .btn{background:var(--gold); color:var(--navy-900);}
   .lead-card.blue .btn{background:var(--blue-500); color:var(--white);}
-  .hp-field{position:absolute; left:-9999px;}
   .form-note{font-size:0.78rem; color:var(--ink-soft); margin-top:10px;}
-  .form-status{
-    display:none;
-    font-family:'Montserrat', sans-serif;
-    font-weight:700;
-    font-size:0.9rem;
-    color:#1E7A4C;
-    background:#E6F5EC;
-    border-radius:8px;
-    padding:10px 14px;
-    margin-top:12px;
-  }
-  .form-status.show{display:block;}
 
   /* Footer */
   footer.site{
@@ -329,7 +316,7 @@
   .article-image img{
     width:100%;
     height:auto;
-    max-height:600px;
+    max-height:780px;
     object-fit:contain;
     border-radius:var(--radius);
     box-shadow:var(--shadow);
@@ -345,17 +332,15 @@
     <a href="/" class="brand">KNG <span>Tax Advisory</span>
       <span class="brand-tag">Knowledge · Navigation · Growth</span>
     </a>
-    <a href="#checklist" class="btn btn-outline" style="margin-left:0; padding:10px 18px; font-size:0.85rem;">Get the Checklist</a>
+    <a href="#checklist" class="btn btn-outline" style="margin-left:0; padding:10px 18px; font-size:0.85rem;">Get the Rental Property Tax Planning Guide for Free</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">For W-2 Earners &amp; Business Owners With Rental Property</span>
-    <h1>Your Rental Shows a Tax Loss. Why Isn't It Reducing Your W-2 or Business Income?</h1>
+    <h1>Your Rental Shows a Tax Loss. Why Isn't It Reducing Your <span style="white-space:nowrap;">W-2</span> or Business Income?</h1>
     <p class="lead">If you earn W-2 wages or run a business and also own rental property, you may be missing tax-planning opportunities. Here are 5 strategies that can affect when rental losses are deductible, how quickly you claim depreciation, and how much tax you may defer when you sell.</p>
-    <a href="#checklist" class="btn btn-primary">Get the Full Checklist</a>
-    <a href="#consult" class="btn btn-outline">Book a Free Call</a>
   </div>
 </section>
 
@@ -367,7 +352,7 @@
 
 <section class="intro">
   <div class="wrap">
-    <p>Many rental owners assume a tax loss automatically reduces the income from their job or business. Often, it doesn't. Here are five strategies that may help you make better use of rental losses, depreciation, and gains.</p>
+    <p style="color:var(--navy-800); font-weight:600;">Many rental owners assume a tax loss automatically reduces the income from their job or business. Often, it doesn't. Here are five strategies that may help you make better use of rental losses, depreciation, and gains.</p>
   </div>
 </section>
 
@@ -377,9 +362,9 @@
     <div class="strategy">
       <span class="num">Strategy 01</span>
       <h3>Short-Term Rental Losses May Offset Your W-2 or Business Income</h3>
-      <p>Your rental property may show a tax loss, but that loss generally <strong>doesn’t reduce the income from your job or business</strong>. That’s because the tax rules usually put rental income and losses into a separate category. However, certain <strong>short-term rentals</strong> can be treated differently, which may allow the losses to reduce your W-2 wages or business income.</p>
+      <p>Your rental property may show a tax loss, but that loss generally <strong>doesn’t reduce the income from your job or business</strong>. That’s because the tax rules usually put rental income and losses into a separate category, called passive activity. However, certain <strong>short-term rentals</strong> can be treated differently, which may allow the losses to reduce your W-2 wages or business income.</p>
       <p>A short-term rental may qualify when the <strong>average guest stay is 7 days or less</strong>, such as many Airbnb-type rentals. To calculate the average stay, divide the total number of rental days by the number of separate guest stays.</p>
-      <p>The second key requirement is that <strong>you need to be actively involved in running the property</strong>. You may meet this requirement if, for example, you:</p>
+      <p>The second key requirement is that <strong>you need to be actively involved in running the property</strong>. You may meet this requirement if, you meet one of the below test:</p>
       <ul>
         <li>Spend more than 500 hours in the activity</li>
         <li>Spend more than 100 hours and at least as much time as anyone else</li>
@@ -477,9 +462,10 @@
       <div class="lead-card accent">
         <h3>Want the Rental Property Tax Planning Guide for Free?</h3>
         <p>Get our Rental Property Tax Planning Guide with the strategies above and additional planning considerations sent to your inbox — no cost, no obligation.</p>
-        <form name="rental-checklist-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event, 'checklistStatus');">
-          <input type="hidden" name="form-name" value="rental-checklist-request">
-          <p class="hp-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <form name="rental-checklist-request" action="https://formsubmit.co/kristine@kngtax.com" method="POST">
+          <input type="hidden" name="_subject" value="Rental Property Tax Planning Guide request">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
           <div class="field">
             <label for="cl-name">Name</label>
             <input type="text" id="cl-name" name="name" required autocomplete="name">
@@ -489,18 +475,17 @@
             <input type="email" id="cl-email" name="email" required autocomplete="email">
           </div>
           <button type="submit" class="btn">Send Me the Planning Guide</button>
-          <div class="form-status" id="checklistStatus">Thanks — your checklist request has been sent. We'll email it to you shortly.</div>
         </form>
-        <p class="form-note">Your request goes straight to our team at info@kngtax.com.</p>
       </div>
 
       <!-- Consultation booking -->
       <div class="lead-card blue" id="consult">
         <h3>Complimentary 25-Minute Rental Property Tax Assessment</h3>
         <p>We'll learn about your rental portfolio, discuss your primary tax concerns, and determine whether there are areas that warrant a deeper tax review. No tax return or document review is required for the introductory call.</p>
-        <form name="rental-consultation-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleSubmit(event, 'consultStatus');">
-          <input type="hidden" name="form-name" value="rental-consultation-request">
-          <p class="hp-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <form name="rental-consultation-request" action="https://formsubmit.co/kristine@kngtax.com" method="POST">
+          <input type="hidden" name="_subject" value="Rental Property Tax Assessment request">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
           <div class="field">
             <label for="cs-name">Name</label>
             <input type="text" id="cs-name" name="name" required autocomplete="name">
@@ -524,9 +509,7 @@
             </select>
           </div>
           <button type="submit" class="btn">Request My Free Call</button>
-          <div class="form-status" id="consultStatus">Thanks — we've received your request and will reach out to schedule your call.</div>
         </form>
-        <p class="form-note">Your request goes straight to our team at info@kngtax.com.</p>
       </div>
 
     </div>
@@ -559,30 +542,6 @@
     result.style.background = checked >= 2 ? 'rgba(199,162,74,0.22)' : 'rgba(127,176,224,0.14)';
   }
   boxes.forEach(b => b.addEventListener('change', updateResult));
-
-  // Netlify AJAX submit so the visitor sees a confirmation without leaving the page
-  function encode(data) {
-    return Object.keys(data).map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])).join("&");
-  }
-  function handleSubmit(e, statusId){
-    e.preventDefault();
-    const form = e.target;
-    const data = {};
-    new FormData(form).forEach((value, key) => data[key] = value);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode(data),
-    })
-    .then(() => {
-      document.getElementById(statusId).classList.add('show');
-      form.reset();
-    })
-    .catch(() => {
-      alert("Something went wrong sending your request — please email info@kngtax.com directly.");
-    });
-    return false;
-  }
 </script>
 
 </body>
