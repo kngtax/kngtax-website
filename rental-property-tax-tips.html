@@ -138,6 +138,26 @@
   /* Intro */
   .intro{padding:28px 0 12px;}
   .intro p{font-size:1.02rem; color:var(--ink-soft); max-width:680px;}
+  .intro-flex{
+    display:grid;
+    grid-template-columns:minmax(260px, 380px) 1fr;
+    gap:36px;
+    align-items:start;
+  }
+  .intro-image img{
+    width:100%;
+    height:auto;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    display:block;
+    position:sticky;
+    top:24px;
+  }
+  .intro-text p{max-width:none;}
+  @media (max-width:820px){
+    .intro-flex{grid-template-columns:1fr; gap:20px;}
+    .intro-image img{position:static; max-height:340px; object-fit:cover; width:100%;}
+  }
 
   /* Strategy cards */
   .strategies{padding:12px 0 40px;}
@@ -313,17 +333,6 @@
   }
 
   /* Article image */
-  .article-image{padding:24px 0 0;}
-  .article-image img{
-    width:100%;
-    height:auto;
-    max-height:420px;
-    object-fit:contain;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    display:block;
-    margin:0 auto;
-  }
 </style>
 </head>
 <body>
@@ -345,15 +354,26 @@
   </div>
 </section>
 
-<section class="article-image">
-  <div class="wrap">
-    <img src="image/apartment-building-exterior.jpg" alt="Modern apartment rental building exterior">
-  </div>
-</section>
-
 <section class="intro">
-  <div class="wrap">
-    <p style="color:var(--navy-800); font-weight:600;">Many rental owners assume a tax loss automatically reduces the income from their job or business. Often, it doesn't. Here are five strategies that may help you make better use of rental losses, depreciation, and gains.</p>
+  <div class="wrap intro-flex">
+    <div class="intro-image">
+      <img src="image/apartment-building-exterior.jpg" alt="Modern apartment rental building exterior">
+    </div>
+    <div class="intro-text">
+      <p style="color:var(--navy-800); font-weight:600;">Many rental owners assume a tax loss automatically reduces the income from their job or business. Often, it doesn't. Here are five strategies that may help you make better use of rental losses, depreciation, and gains.</p>
+
+      <h2 style="margin-top:22px;">5 Tax Strategies</h2>
+      <ol style="margin:10px 0 16px; padding-left:20px; color:var(--ink-soft);">
+        <li>Short-term rental structure to offset your W-2 or Business Income</li>
+        <li>Real estate professional qualification</li>
+        <li>$25,000 of rental loss deduction</li>
+        <li>Cost Segregation</li>
+        <li>Selling a Rental With a Large Gain? Consider a 1031 Exchange Before You Close.</li>
+      </ol>
+      <p style="color:var(--ink-soft);">For more details of the strategies, keep on reading.</p>
+      <p style="color:var(--ink-soft);">In addition, we prepared a Rental Property Tax Planning Guide that includes the strategies above and more. Want the planning guide for free? <a href="#checklist" style="color:var(--blue-500); font-weight:700;">Click here</a>.</p>
+      <p style="color:var(--ink-soft);">Want a complimentary call with us to assess your rental property? <a href="#consult" style="color:var(--blue-500); font-weight:700;">Click here</a>.</p>
+    </div>
   </div>
 </section>
 
